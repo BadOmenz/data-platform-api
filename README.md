@@ -8,6 +8,19 @@ It demonstrates core backend engineering concepts including schema design, API s
 
 ---
 
+## Project Structure
+
+```
+project01_data_platform/
+│
+├── backend/
+│   ├── main.py
+│   ├── alembic/
+│   └── db_test.py
+│
+└── README.md
+```
+
 ## Tech Stack
 
 * FastAPI (API layer)
