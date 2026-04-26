@@ -10,37 +10,41 @@ It demonstrates core backend engineering concepts including schema design, API s
 
 ## How to Run
 
-### 1. Clone the repository
+## How to Run (Docker)
+
+1. Clone the repository
 
 git clone https://github.com/BadOmenz/data-platform-api.git
-cd data-platform-api/backend
+cd data-platform-api
 
 ---
 
-### 2. Create and activate virtual environment (Windows)
+2. Start the application and database
 
-python -m venv venv
-venv\Scripts\activate
-
----
-
-### 3. Install dependencies
-
-pip install -r requirements.txt
+docker compose up
 
 ---
 
-### 4. Start the API
+3. Apply database migrations (in a new terminal)
 
-python -m uvicorn main:app --reload
+docker exec -it data_platform_api bash
+alembic upgrade head
+exit
 
 ---
 
-### 5. Open in browser
+4. Open in browser
 
-API docs:
-http://127.0.0.1:8000/docs
+http://localhost:8000/docs
 
+---
+
+Notes
+
+- The database persists between restarts via Docker volume
+- To reset the database completely:
+
+docker compose down -v
 ---
 
 ## Project Structure
