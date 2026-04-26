@@ -8,6 +8,41 @@ It demonstrates core backend engineering concepts including schema design, API s
 
 ---
 
+## How to Run
+
+### 1. Clone the repository
+
+git clone https://github.com/BadOmenz/data-platform-api.git
+cd data-platform-api/backend
+
+---
+
+### 2. Create and activate virtual environment (Windows)
+
+python -m venv venv
+venv\Scripts\activate
+
+---
+
+### 3. Install dependencies
+
+pip install -r requirements.txt
+
+---
+
+### 4. Start the API
+
+python -m uvicorn main:app --reload
+
+---
+
+### 5. Open in browser
+
+API docs:
+http://127.0.0.1:8000/docs
+
+---
+
 ## Project Structure
 
 ```
